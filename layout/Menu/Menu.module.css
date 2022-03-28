@@ -7,6 +7,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
+  margin-top: 20px;
 }
 
 .firstLevelActive,
@@ -17,4 +18,52 @@
 .firstLevelActive svg,
 .firstLevel:hover svg {
   fill: var(--primary);
+}
+
+.secondLevel {
+  margin-bottom: 10px;
+
+  cursor: pointer;
+  text-transform: uppercase;
+
+  color: var(--gray-dark);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.secondBlock {
+  margin-top: 15px;
+  margin-left: 12px;
+  padding-left: 32px;
+
+  border-left: 1px solid #dfdfdf;
+}
+
+.secondLevelBlock {
+  display: none;
+}
+
+.secondLevelBlockOpened {
+  display: block;
+}
+
+.secondLevelBlockOpened:last-child {
+  margin-bottom: 20px;
+}
+
+.thirdLevel {
+  margin-bottom: 10px;
+  display: block;
+
+  cursor: pointer;
+
+  color: var(--gray-dark);
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+}
+
+.thirdLevelActive,
+.thirdLevel:hover {
+  color: var(--primary);
 }
