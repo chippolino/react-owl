@@ -10,7 +10,7 @@ export interface TagProps
     ButtonHTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  size: TagSize;
+  size?: TagSize;
   children: ReactNode;
   color?: "ghost" | "red" | "gray" | "green" | "primary";
   href?: string;
