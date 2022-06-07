@@ -15,6 +15,7 @@ import { useState } from "react";
 
 export function ReviewForm({
   className,
+  isOpened,
   productId,
   ...rest
 }: ReviewFormProps): JSX.Element {
@@ -57,6 +58,7 @@ export function ReviewForm({
           })}
           placeholder={"Имя"}
           error={errors.name}
+          tabIndex={isOpened ? 0 : -1}
         />
         <Input
           {...register("title", {
@@ -65,6 +67,7 @@ export function ReviewForm({
           className={styles.title}
           placeholder={"Заголовок отзыва"}
           error={errors.title}
+          tabIndex={isOpened ? 0 : -1}
         />
         <div className={styles.rating}>
           <span>Оценка:</span>
@@ -90,9 +93,15 @@ export function ReviewForm({
           className={styles.description}
           placeholder={"Текст отзыва"}
           error={errors.description}
+          tabIndex={isOpened ? 0 : -1}
         />
         <div className={styles.submit}>
-          <Button appearance={ButtonAppearance.primary}>Отправить</Button>
+          <Button
+            appearance={ButtonAppearance.primary}
+            tabIndex={isOpened ? 0 : -1}
+          >
+            Отправить
+          </Button>
           <span className={styles.info}>
             * Перед публикацией отзыв пройдет предварительную модерацию и
             проверку
