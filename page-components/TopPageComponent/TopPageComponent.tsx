@@ -35,7 +35,11 @@ export function TopPageComponent({
       <div className={styles.title}>
         <Htag tag={Tags.H1}>{page.title}</Htag>
         {sortedProducts && (
-          <Tag size={TagSize.Mid} color={"gray"}>
+          <Tag
+            size={TagSize.Mid}
+            color={"gray"}
+            aria-label={products.length + "элементов"}
+          >
             {sortedProducts.length}
           </Tag>
         )}
